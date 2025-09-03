@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(270deg, #ff6b6b, #f1c40f, #4a90e2, #e0eafc);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.note-app {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.note-app h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.note-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.note-app input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.note-app button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #4a90e2;
+  color: white;
+}
+
+.note-app button:hover {
+  background: #357ab7;
+}
+
+.note-app ul {
+  list-style: none;
+  padding: 0;
+}
+
+.note-app li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.note-app .actions button {
+  margin-left: 5px;
+  background: #ff6b6b;
+}
+
+.note-app .actions button:first-child {
+  background: #f1c40f;
+}
+
+.note-app .actions button:hover {
+  opacity: 0.8;
+}
