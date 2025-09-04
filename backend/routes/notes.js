@@ -50,3 +50,42 @@ router.put("/:id", async (req, res) => {
   }
 });
 export default router;
+
+// //(Register/Login)
+
+// import express from "express";
+// import Note from "../models/Note.js";
+// import auth from "../middleware/auth.js";
+
+// const router = express.Router();
+
+// // get user notes
+// router.get("/", auth, async (req, res) => {
+//   const notes = await Note.find({ userId: req.user.id });
+//   res.json(notes);
+// });
+
+// // create note
+// router.post("/", auth, async (req, res) => {
+//   const note = new Note({ text: req.body.text, userId: req.user.id });
+//   await note.save();
+//   res.json(note);
+// });
+
+// // update note
+// router.put("/:id", auth, async (req, res) => {
+//   const updated = await Note.findOneAndUpdate(
+//     { _id: req.params.id, userId: req.user.id },
+//     { text: req.body.text },
+//     { new: true }
+//   );
+//   res.json(updated);
+// });
+
+// // delete note
+// router.delete("/:id", auth, async (req, res) => {
+//   await Note.findOneAndDelete({ _id: req.params.id, userId: req.user.id });
+//   res.json({ message: "Note deleted" });
+// });
+
+// export default router;
